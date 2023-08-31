@@ -1,3 +1,6 @@
+using MeetingRoomManagementSystem.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace MeetingRoomManagementSystem
 {
     public class Program
@@ -9,6 +12,9 @@ namespace MeetingRoomManagementSystem
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDbContext<MeetingDbContext>(options =>
+                    options.UseSqlServer(builder.Configuration
+                    .GetConnectionString("MeetingRoomDbConnectionString")));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

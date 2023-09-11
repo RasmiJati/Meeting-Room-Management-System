@@ -5,7 +5,7 @@
 namespace MeetingRoomManagementSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class DatabasecreatedandDataseeding : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,7 @@ namespace MeetingRoomManagementSystem.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(200)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(300)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(200)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(200)", nullable: false),
                     Role = table.Column<int>(type: "int", nullable: false)
                 },
@@ -25,6 +25,11 @@ namespace MeetingRoomManagementSystem.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Email", "Name", "Password", "Role" },
+                values: new object[] { 1, "admin123@gmail.com", "Admin", "Admin@123", 0 });
         }
 
         /// <inheritdoc />

@@ -1,4 +1,5 @@
 using MeetingRoomManagementSystem.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace MeetingRoomManagementSystem
@@ -15,6 +16,7 @@ namespace MeetingRoomManagementSystem
             builder.Services.AddDbContext<MeetingDbContext>(options =>
                     options.UseSqlServer(builder.Configuration
                     .GetConnectionString("MeetingRoomDbConnectionString")));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

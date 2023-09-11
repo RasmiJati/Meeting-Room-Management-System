@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pKAfalsv0GparnaLOVEdXsXx2Cgtnha7L7ydW4YOkSQ=",
+  "Hash": "vP8jFu+wA7tjXmSP9o+k4ePMVYYe0a6BqnFXTHxqh6w=",
   "Source": "MeetingRoomManagementSystem",
   "BasePath": "_content/MeetingRoomManagementSystem",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\.net\\project\\MeetingRoomManagementSystem\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MeetingRoomManagementSystem.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\.net\\project\\MeetingRoomManagementSystem\\wwwroot\\css\\login.css",
+      "SourceId": "MeetingRoomManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\.net\\project\\MeetingRoomManagementSystem\\wwwroot\\",
+      "BasePath": "_content/MeetingRoomManagementSystem",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "D:\\.net\\project\\MeetingRoomManagementSystem\\wwwroot\\css\\site.css",

@@ -18,5 +18,16 @@ namespace MeetingRoomManagementSystem.Controllers
             List<User> users = _db.Users.ToList();
             return View(users);
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
+
 }

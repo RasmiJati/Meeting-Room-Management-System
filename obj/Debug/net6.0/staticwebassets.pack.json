@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MeetingRoomManagementSystem.bundle.scp.css"
     },
     {
+      "Id": "D:\\.net\\project\\MeetingRoomManagementSystem\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "D:\\.net\\project\\MeetingRoomManagementSystem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

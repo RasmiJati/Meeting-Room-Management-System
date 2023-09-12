@@ -1,4 +1,53 @@
-﻿
+﻿@model User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+
+<form method="post" asp-action="Login">
+
+    <div class=" border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Login</h2>
+            <hr />
+        </div>
+
+        <div asp-validation-summary="All"></div>
+
+        <div class=" mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class=" text-danger"></span>
+        </div>
+        
+       
+        <div class=" mb-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class=" form-control" />
+            <span asp-validation-for="Password" class=" text-danger"></span>
+
+        </div>
+
+        <button type="submit" class=" btn btn-primary" style="width:150px">Login</button>
+        @* <a asp-controller="User" asp-action="Index" class=" btn btn-secondary" style="width: 150px">Back to List </a> *@
+
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
+
+
+
+
+
+@* 
 @{
     ViewData["Title"] = "Login";
 }
@@ -37,3 +86,4 @@
         <button type="submit" class=" btn btn-primary" style="width:150px">Login</button>
         <p>Don't have Account?<a asp-controller="User" asp-action="Create" class=" btn btn-secondary" style="width: 150px">Register </a></p>
 </form>
+ *@

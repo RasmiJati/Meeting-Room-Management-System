@@ -124,13 +124,22 @@ namespace MeetingRoomManagementSystem.Controllers
         [HttpPost]
        public IActionResult Login(User obj)
         {
-            bool userExist = _db.Users.Any(x => x.Email == obj.Email && x.Password == obj.Password);
-          //  User u = _db.Users.FirstOrDefault(x => x.Name == obj.Name && x.Password == obj.Password);
+            bool userExist = _db.Users.Any(x => x.Role == obj.Role && x.Email == obj.Email && x.Password == obj.Password);
+            
+            // User u = _db.Users.FirstOrDefault(x => x.Name == obj.Name && x.Password == obj.Password);
             if (userExist)
             {
-                //FormsAuthentication.SetAuthCookies(u.Name , false);
-                TempData["success"] = "Login Successfull";
-                return RedirectToAction("Index", "Home");
+                if (obj.Role == UserRole.ADMIN)
+                {
+                    //FormsAuthentication.SetAuthCookies(u.Name , false);
+                    TempData["success"] = "Login Successfull";
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    TempData["success"] = "Login Successfull";
+                    return RedirectToAction("UserIndex", "Home");
+                }
             }
             TempData["error"] = "Email or password is wrong";
             //ModelState.AddModelError("", "Email or password is wrong");

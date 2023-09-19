@@ -37,6 +37,15 @@
 
             <div asp-validation-summary="All"></div>
 
+             <div class=" mb-3">
+                <label asp-for="Role"></label>
+                <select asp-for="Role" class="form-select" aria-label="Select role">
+                    <option selected>User Roles</option>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="USER">USER</option>
+                </select>
+            </div> 
+
             <div class=" mb-3">
                 <label asp-for="Email"></label>
                 <input type="email" asp-for="Email" class="form-control" />
@@ -46,7 +55,7 @@
 
             <div class=" mb-3">
                 <label asp-for="Password"></label>
-                <input type = "password" asp-for="Password" class=" form-control" />
+                <input type="password" asp-for="Password" class=" form-control" />
                 <span asp-validation-for="Password" class=" text-danger"></span>
 
             </div>

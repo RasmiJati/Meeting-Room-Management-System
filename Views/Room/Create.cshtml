@@ -1,0 +1,36 @@
+﻿@model Room
+
+<form method="post" asp-action="Create">
+
+    <div class=" border p-3 mt-4" style="width : 800px">
+        <div class="row pb-2">
+            <h2 class="text-primary">Create Room</h2>
+            <hr />
+        </div>
+
+        <div asp-validation-summary="All"></div>
+
+        <div class=" mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class=" text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Capacity"></label>
+            <input asp-for="Capacity" class=" form-control" />
+            <span asp-validation-for="Capacity" class=" text-danger"></span>
+        </div>
+
+        <div class=" mb-3">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class=" form-control" />
+            <span asp-validation-for="Description" class=" text-danger"></span>
+
+        </div>
+
+        <button type="submit" class=" btn btn-primary" style="width:150px">Create</button>
+        <a asp-controller="Room" asp-action="Index" class=" btn btn-secondary" style="width: 150px">Back to List </a>
+
+    </div>
+</form>

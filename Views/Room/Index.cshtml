@@ -1,4 +1,4 @@
-﻿@model List<User>
+﻿@model List<Room>
 @{
     ViewData["Title"] = "Index";
 }
@@ -53,11 +53,11 @@
     <div class="container p-3">
         <div class=" row pt-4">
             <div class="col-6">
-                <h2 class=" text-primary">User List</h2>
+                <h2 class=" text-primary">Room List</h2>
             </div>
 
             <div class=" col-6 text-end">
-                <a asp-controller="User" asp-action="Create" class=" btn btn-primary"> <i class="bi bi-plus-circle"></i>Create new User</a>
+                <a asp-controller="Room" asp-action="Create" class=" btn btn-primary"> <i class="bi bi-plus-circle"></i>Create new Room</a>
             </div>
 
         </div>
@@ -69,8 +69,9 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
+                <th>Capacity</th>
+                <th>Description</th>
+                <th>Status</th>
                 <th></th>
             </tr>
         </thead>
@@ -79,14 +80,15 @@
             {
                 <tr>
                     <td width="25%">@obj.Name</td>
-                    <td width="50%">@obj.Email</td>
-                    <td width="25%">@obj.Role</td>
+                    <td width="50%">@obj.Capacity</td>
+                    <td width="25%">@obj.Description</td>
+                    <td width="25%">@obj.Status</td>
                     <td>
                         <div class="w-75 btn-group" role="group">
-                            <a asp-controller="User" asp-action="Edit" asp-route-id="@obj.Id"
+                            <a asp-controller="Room" asp-action="Edit" asp-route-id="@obj.Id"
                                class=" btn btn-primary mx-2"><i class="bi bi-pencil-square"></i>Edit</a>
 
-                            <a asp-controller="User" asp-action="Delete" asp-route-id="@obj.Id"
+                            <a asp-controller="Room" asp-action="Delete" asp-route-id="@obj.Id"
                                class=" btn btn-danger mx-2"><i class="bi bi-trash-fill"></i> Delete</a>
                         </div>
                     </td>

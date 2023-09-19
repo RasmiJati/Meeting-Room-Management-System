@@ -141,8 +141,7 @@ namespace MeetingRoomManagementSystem.Controllers
                     return RedirectToAction("UserIndex", "Home");
                 }
             }
-            TempData["error"] = "Email or password is wrong";
-            //ModelState.AddModelError("", "Email or password is wrong");
+            TempData["error"] = "Email or password or role is invalid";
             return View();
         }
     }

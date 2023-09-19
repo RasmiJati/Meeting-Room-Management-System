@@ -17,6 +17,10 @@ namespace MeetingRoomManagementSystem
                     options.UseSqlServer(builder.Configuration
                     .GetConnectionString("MeetingRoomDbConnectionString")));
 
+            //builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+            //    options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<MeetingDbContext>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -31,12 +35,13 @@ namespace MeetingRoomManagementSystem
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication(); ;
 
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=User}/{action=Login}/{id?}");
 
             app.Run();
         }

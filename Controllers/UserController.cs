@@ -24,6 +24,11 @@ namespace MeetingRoomManagementSystem.Controllers
             return View();
         }
 
+        public IActionResult Logout()
+        {
+            return RedirectToAction("Login");
+        }
+
         public IActionResult Create()
         {
             return View();
@@ -36,7 +41,6 @@ namespace MeetingRoomManagementSystem.Controllers
         {
             if (obj.Name == obj.Email)
             {
-                //ModelState.AddModelError("CustomError","Name and email can't be same");
                 ModelState.AddModelError("name", "Name and email can't be same");
             }
             if (ModelState.IsValid)
@@ -74,7 +78,6 @@ namespace MeetingRoomManagementSystem.Controllers
         {
             if (obj.Name == obj.Email)
             {
-                //ModelState.AddModelError("CustomError","Name and email can't be same");
                 ModelState.AddModelError("name", "Name and email can't be same");
             }
             if (ModelState.IsValid)
@@ -117,5 +120,21 @@ namespace MeetingRoomManagementSystem.Controllers
             TempData["success"] = "Successfully Deleted ";
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+       public IActionResult Login(User obj)
+        {
+            bool userExist = _db.Users.Any(x => x.Email == obj.Email && x.Password == obj.Password);
+          //  User u = _db.Users.FirstOrDefault(x => x.Name == obj.Name && x.Password == obj.Password);
+            if (userExist)
+            {
+                //FormsAuthentication.SetAuthCookies(u.Name , false);
+                TempData["success"] = "Login Successfull";
+                return RedirectToAction("Index", "Home");
+            }
+            TempData["error"] = "Email or password is wrong";
+            //ModelState.AddModelError("", "Email or password is wrong");
+            return View();
+        }
     }
-}
+        }

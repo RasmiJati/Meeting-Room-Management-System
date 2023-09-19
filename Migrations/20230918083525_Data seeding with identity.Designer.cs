@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MeetingRoomManagementSystem.Migrations
 {
     [DbContext(typeof(MeetingDbContext))]
-    [Migration("20230911052728_Database created and Data seeding")]
-    partial class DatabasecreatedandDataseeding
+    [Migration("20230918083525_Data seeding with identity")]
+    partial class Dataseedingwithidentity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,16 +50,6 @@ namespace MeetingRoomManagementSystem.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Email = "admin123@gmail.com",
-                            Name = "Admin",
-                            Password = "Admin@123",
-                            Role = 0
-                        });
                 });
 #pragma warning restore 612, 618
         }

@@ -1,8 +1,48 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-}
+}﻿
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MeetingRoomManagementSystem</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                    <a class="nav-link " asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link " asp-controller="User" asp-action="Index">User</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link " asp-controller="" asp-action="">Room</a>
+                    </li>
+                     <li class="nav-item">
+                    <a class="nav-link " asp-controller="" asp-action="">Book</a>
+                    </li>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Setting</a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" asp-controller="User" asp-action="Logout">Log out</a>
+                    </div>
+                    </li>
+
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+</body>

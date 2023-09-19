@@ -1,89 +1,64 @@
 ﻿@model User
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Login";
 }
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MeetingRoomManagementSystem</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link " asp-controller="User" asp-action="Login">Home</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
 
-<h1>Create</h1>
+    </header>
+
+    <form method="post" asp-action="Login">
+
+        <div class=" border p-3 mt-4" style="width:50%">
+            <div class="row pb-2">
+                <h2 class="text-primary">Login</h2>
+                <hr />
+            </div>
+
+            <div asp-validation-summary="All"></div>
+
+            <div class=" mb-3">
+                <label asp-for="Email"></label>
+                <input type="email" asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class=" text-danger"></span>
+            </div>
 
 
-<form method="post" asp-action="Login">
+            <div class=" mb-3">
+                <label asp-for="Password"></label>
+                <input type = "password" asp-for="Password" class=" form-control" />
+                <span asp-validation-for="Password" class=" text-danger"></span>
 
-    <div class=" border p-3 mt-4">
-        <div class="row pb-2">
-            <h2 class="text-primary">Login</h2>
-            <hr />
+            </div>
+
+            <button type="submit" class=" btn btn-primary" style="width:150px">Login</button>
+
         </div>
-
-        <div asp-validation-summary="All"></div>
-
-        <div class=" mb-3">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" />
-            <span asp-validation-for="Name" class=" text-danger"></span>
-        </div>
-        
-       
-        <div class=" mb-3">
-            <label asp-for="Password"></label>
-            <input asp-for="Password" class=" form-control" />
-            <span asp-validation-for="Password" class=" text-danger"></span>
-
-        </div>
-
-        <button type="submit" class=" btn btn-primary" style="width:150px">Login</button>
-        @* <a asp-controller="User" asp-action="Index" class=" btn btn-secondary" style="width: 150px">Back to List </a> *@
-
-    </div>
-</form>
+    </form>
+</body>
 
 @section Scripts{
     @{
         <partial name="_ValidationScriptsPartial" />
     }
 }
-
-
-
-
-
-@* 
-@{
-    ViewData["Title"] = "Login";
-}
-
-
-
-<form method ="post" asp-action="Login">
-
-    <div class=" border p-3 mt-4">
-        <div class="row pb-2">
-            <h2 class="text-primary">Login</h2>
-            <hr />
-        </div>
-
-        <div asp-validation-summary="All"></div>
-
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-      </div>
-      <div class="mb-3">
-        <label for="inputPassword5" class="form-label">Password</label>
-        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder = "Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.">
-      </div>
-
-    <div class="d-flex justify-content-between align-items-center">
-            <!-- Checkbox -->
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                Remember me
-              </label>
-            </div>
-            <a href="#!" class="text-body">Forgot password?</a>
-    </div>
-        <button type="submit" class=" btn btn-primary" style="width:150px">Login</button>
-        <p>Don't have Account?<a asp-controller="User" asp-action="Create" class=" btn btn-secondary" style="width: 150px">Register </a></p>
-</form>
- *@

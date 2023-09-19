@@ -1,6 +1,8 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}﻿
+﻿@model List<User>
+@{
+    ViewData["Title"] = "UserIndex";
+}
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -17,11 +19,9 @@
                         <li class="nav-item">
                             <a class="nav-link " asp-controller="User" asp-action="UserIndex">User</a>
                         </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link " asp-controller="" asp-action="">Book</a>
                         </li>
-
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Setting</a>
                             <div class="dropdown-menu">
@@ -43,4 +43,38 @@
         </nav>
 
     </header>
+
+
+    <div class="container p-3">
+        <div class=" row pt-4">
+            <div class="col-6">
+                <h2 class=" text-primary">User List</h2>
+            </div>
+        </div>
+        <br /> <br />
+
+    </div>
+
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td width="25%">@obj.Name</td>
+                    <td width="50%">@obj.Email</td>
+                    <td width="25%">@obj.Role</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
 </body>
+
+

@@ -18,6 +18,11 @@ namespace MeetingRoomManagementSystem.Controllers
             List<User> users = _db.Users.ToList();
             return View(users);
         }
+        public IActionResult UserIndex()
+        {
+            List<User> users = _db.Users.ToList();
+            return View(users);
+        }
 
         public IActionResult Login()
         {

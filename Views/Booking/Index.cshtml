@@ -1,4 +1,4 @@
-﻿@model List<User>
+﻿@model List<Booking>
 @{
     ViewData["Title"] = "Index";
 }
@@ -26,6 +26,7 @@
                             <a class="nav-link " asp-controller="Booking" asp-action="Index">Book Meeting Room</a>
                         </li>
 
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Setting</a>
                             <div class="dropdown-menu">
@@ -52,11 +53,11 @@
     <div class="container p-3">
         <div class=" row pt-4">
             <div class="col-6">
-                <h2 class=" text-primary">User List</h2>
+                <h2 class=" text-primary">Booking List</h2>
             </div>
 
             <div class=" col-6 text-end">
-                <a asp-controller="User" asp-action="Create" class=" btn btn-primary"> <i class="bi bi-plus-circle"></i>Create new User</a>
+                <a asp-controller="Booking" asp-action="Create" class=" btn btn-primary"> <i class="bi bi-plus-circle"></i>Create New Booking</a>
             </div>
 
         </div>
@@ -67,9 +68,10 @@
     <table class="table table-bordered table-striped" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
+                <th>Room Name</th>
+                <th>Room Capacity</th>
+                <th>User</th>
+                <th>Date</th>
                 <th></th>
             </tr>
         </thead>
@@ -77,16 +79,21 @@
             @foreach (var obj in Model)
             {
                 <tr>
-                    <td width="25%">@obj.Name</td>
-                    <td width="50%">@obj.Email</td>
-                    <td width="25%">@obj.Role</td>
+                    <td width="25%">@obj.Room.Name</td>
+                    <td width="25%">@obj.Room.Capacity</td>
+                    <td width="50%">@obj.User.Name</td>
+                    <td width="25%">@obj.Date</td>
                     <td>
                         <div class="w-75 btn-group" role="group">
-                            <a asp-controller="User" asp-action="Edit" asp-route-id="@obj.Id"
+                            <a asp-controller="Booking" asp-action="Edit" asp-route-id="@obj.Id"
                                class=" btn btn-primary mx-2"><i class="bi bi-pencil-square"></i>Edit</a>
 
-                            <a asp-controller="User" asp-action="Delete" asp-route-id="@obj.Id"
+                            <a asp-controller="Booking" asp-action="Delete" asp-route-id="@obj.Id"
                                class=" btn btn-danger mx-2"><i class="bi bi-trash-fill"></i> Delete</a>
+                            
+                               <a asp-controller="Booking" asp-action="Index" asp-route-id="@obj.Id"
+                               class=" btn btn-danger mx-2"><i class="bi bi-trash-fill"></i> View Detail</a>
+
                         </div>
                     </td>
                 </tr>

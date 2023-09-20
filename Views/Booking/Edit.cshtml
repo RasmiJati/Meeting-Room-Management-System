@@ -1,0 +1,58 @@
+﻿@model Booking
+
+<form method="post" asp-action="Edit">
+
+    <div class=" border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Booking</h2>
+            <hr />
+        </div>
+
+        <div class=" mb-3">
+            <label asp-for="Room"></label>
+            <input asp-for="Room" class="form-control" />
+            <span asp-validation-for="Room" class=" text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="User"></label>
+            <input asp-for="User" class=" form-control" />
+            <span asp-validation-for="User" class=" text-danger"></span>
+
+        </div>
+
+        <div class=" mb-3">
+            <label asp-for="Date"></label>
+            <input asp-for="Date" class=" form-control" />
+            <span asp-validation-for="Date" class=" text-danger"></span>
+        </div>
+
+        <div class=" mb-3">
+            <label asp-for="StartTime"></label>
+            <input asp-for="StartTime" class=" form-control" />
+            <span asp-validation-for="StartTime" class=" text-danger"></span>
+        </div> 
+        
+        <div class=" mb-3">
+            <label asp-for="EndTime"></label>
+            <input asp-for="EndTime" class=" form-control" />
+            <span asp-validation-for="EndTime" class=" text-danger"></span>
+        </div> 
+        
+        <div class=" mb-3">
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class=" form-control" />
+            <span asp-validation-for="Description" class=" text-danger"></span>
+        </div>
+
+        <button type="submit" class=" btn btn-primary" style="width:150px">Update</button>
+        <a asp-controller="Booking" asp-action="Index" class="btn btn-secondary" style="width: 150px">Back to List </a>
+
+    </div>
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

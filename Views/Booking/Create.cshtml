@@ -15,35 +15,34 @@
         <div asp-validation-summary="All"></div>
 
         <div class=" mb-3">
-            <select asp-for="Room" class="form-select" aria-label="Select room">
-                <option selected>Select Room</option>
-                <option value="Room1">Room1</option>
-                <option value="Room2">Room2</option>
+            <label asp-for="UserId">User</label>
+            <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "Id", "Name"))">
+                <option value="">Select a User</option>
             </select>
         </div>
 
         <div class=" mb-3">
-            <select asp-for="User" class="form-select" aria-label="Select User">
-                <option selected>Select User</option>
-                <option value="rasmi">rasmi</option>
-            </select>
+            <label asp-for="Room"></label>
+                <select asp-for="RoomId" asp-items="@(new SelectList(ViewBag.Rooms, "Id", "Name"))">
+                    <option value="">Select a Room</option>
+                </select>
         </div>
 
         <div class=" mb-3">
             <label asp-for="Date"></label>
-            <input asp-for="Date" class=" form-control" />
+            <input type="date" asp-for="Date" class=" form-control" />
             <span asp-validation-for="Date" class=" text-danger"></span>
         </div>
 
         <div class=" mb-3">
             <label asp-for="StartTime"></label>
-            <input asp-for="StartTime" class=" form-control" />
+            <input type="time" asp-for="StartTime" class=" form-control" />
             <span asp-validation-for="StartTime" class=" text-danger"></span>
         </div>
 
         <div class=" mb-3">
             <label asp-for="EndTime"></label>
-            <input asp-for="EndTime" class=" form-control" />
+            <input type="time" asp-for="EndTime" class=" form-control" />
             <span asp-validation-for="EndTime" class=" text-danger"></span>
         </div>
 

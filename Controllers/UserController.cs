@@ -66,9 +66,7 @@ namespace MeetingRoomManagementSystem.Controllers
                 return NotFound();
             }
             var user = _db.Users.Find(id);
-            //var userFirst=_db.Users.FirstOrDefault(x => x.id == id);
-            //var userSingle = _db.Users.SingleOrDefault(x => x.id == id);
-
+            
             if (user == null)
             {
                 return NotFound();
@@ -131,12 +129,10 @@ namespace MeetingRoomManagementSystem.Controllers
         {
             bool userExist = _db.Users.Any(x => x.Role == obj.Role && x.Email == obj.Email && x.Password == obj.Password);
             
-            // User u = _db.Users.FirstOrDefault(x => x.Name == obj.Name && x.Password == obj.Password);
             if (userExist)
             {
                 if (obj.Role == UserRole.ADMIN)
                 {
-                    //FormsAuthentication.SetAuthCookies(u.Name , false);
                     TempData["success"] = "Login Successfull";
                     return RedirectToAction("Index", "Home");
                 }

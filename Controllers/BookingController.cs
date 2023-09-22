@@ -16,12 +16,18 @@ namespace MeetingRoomManagementSystem.Controllers
         public IActionResult Index()
         {
             List<Booking> bookings = _db.Bookings.ToList();
+            foreach(Booking book in bookings)
+            {
+                Room? room = _db.Rooms.Find(book.RoomId);
+            }
             return View(bookings);
         }
 
-
         public IActionResult Create()
         {
+            ViewBag.Rooms = _db.Rooms.ToList();
+            ViewBag.Users = _db.Users.ToList();
+
             return View();
         }
 
@@ -30,6 +36,7 @@ namespace MeetingRoomManagementSystem.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Booking obj)
         {
+
             if (ModelState.IsValid)
             {
                 _db.Bookings.Add(obj);
@@ -39,7 +46,6 @@ namespace MeetingRoomManagementSystem.Controllers
             }
             return View(obj);
         }
-
 
         public IActionResult Edit(int? id)
         {
@@ -100,6 +106,5 @@ namespace MeetingRoomManagementSystem.Controllers
             TempData["success"] = "Successfully Deleted ";
             return RedirectToAction("Index");
         }
-
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.net\\project\\MeetingRoomManagementSystem\\MeetingRoomManagementSystem.csproj": {}
+    "D:\\New folder\\.net\\project\\MeetingRoomManagementSystem\\MeetingRoomManagementSystem.csproj": {}
   },
   "projects": {
-    "D:\\.net\\project\\MeetingRoomManagementSystem\\MeetingRoomManagementSystem.csproj": {
+    "D:\\New folder\\.net\\project\\MeetingRoomManagementSystem\\MeetingRoomManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.net\\project\\MeetingRoomManagementSystem\\MeetingRoomManagementSystem.csproj",
+        "projectUniqueName": "D:\\New folder\\.net\\project\\MeetingRoomManagementSystem\\MeetingRoomManagementSystem.csproj",
         "projectName": "MeetingRoomManagementSystem",
-        "projectPath": "D:\\.net\\project\\MeetingRoomManagementSystem\\MeetingRoomManagementSystem.csproj",
+        "projectPath": "D:\\New folder\\.net\\project\\MeetingRoomManagementSystem\\MeetingRoomManagementSystem.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\.net\\project\\MeetingRoomManagementSystem\\obj\\",
+        "outputPath": "D:\\New folder\\.net\\project\\MeetingRoomManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

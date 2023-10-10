@@ -37,14 +37,14 @@ namespace MeetingRoomManagementSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<TimeSpan>("EndTime")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.Property<TimeSpan>("StartTime")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -89,6 +89,9 @@ namespace MeetingRoomManagementSystem.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("BookingId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -106,6 +109,8 @@ namespace MeetingRoomManagementSystem.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BookingId");
+
                     b.ToTable("Users");
                 });
 
@@ -118,6 +123,18 @@ namespace MeetingRoomManagementSystem.Migrations
                         .IsRequired();
 
                     b.Navigation("Room");
+                });
+
+            modelBuilder.Entity("MeetingRoomManagementSystem.Models.User", b =>
+                {
+                    b.HasOne("MeetingRoomManagementSystem.Models.Booking", null)
+                        .WithMany("User")
+                        .HasForeignKey("BookingId");
+                });
+
+            modelBuilder.Entity("MeetingRoomManagementSystem.Models.Booking", b =>
+                {
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

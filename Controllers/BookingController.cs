@@ -16,9 +16,10 @@ namespace MeetingRoomManagementSystem.Controllers
         public IActionResult Index()
         {
             List<Booking> bookings = _db.Bookings.ToList();
-            foreach(Booking book in bookings)
+            foreach (Booking book in bookings)
             {
                 Room? room = _db.Rooms.Find(book.RoomId);
+                User? user = _db.Users.Find(book.UserId);
             }
             return View(bookings);
         }
@@ -27,7 +28,6 @@ namespace MeetingRoomManagementSystem.Controllers
         {
             ViewBag.Rooms = _db.Rooms.ToList();
             ViewBag.Users = _db.Users.ToList();
-
             return View();
         }
 
@@ -39,6 +39,7 @@ namespace MeetingRoomManagementSystem.Controllers
 
             if (ModelState.IsValid)
             {
+                //obj.Date.ToShortDateString();
                 _db.Bookings.Add(obj);
                 _db.SaveChanges();
                 TempData["success"] = "Successfully Created";

@@ -10,14 +10,15 @@
 
         <div class=" mb-3">
             <label asp-for="Room"></label>
-            <input asp-for="Room" class="form-control" />
-            <span asp-validation-for="Room" class=" text-danger"></span>
+            <select asp-for="RoomId" asp-items="@(new SelectList(ViewBag.Rooms, "Id", "Name"))">
+                <option value="">Select a Room</option>
+            </select>
         </div>
 
         <div class="mb-3">
-            <label asp-for="UserId"></label>
-            <input asp-for="UserId" class=" form-control" />
-            <span asp-validation-for="UserId" class=" text-danger"></span>
+            <select asp-for="User" asp-items="@(new SelectList(ViewBag.Users, "Id", "Name"))">
+                <option value="">Select a User</option>
+            </select>
 
         </div>
 

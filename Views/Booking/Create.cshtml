@@ -15,14 +15,6 @@
         <div asp-validation-summary="All"></div>
 
         <div class=" mb-3">
-            <label asp-for="UserId">User</label>
-            <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "Id", "Name"))">
-                <option value="">Select a User</option>
-            </select>
-        </div>
-
-        <div class=" mb-3">
-            <label asp-for="Room"></label>
                 <select asp-for="RoomId" asp-items="@(new SelectList(ViewBag.Rooms, "Id", "Name"))">
                     <option value="">Select a Room</option>
                 </select>
@@ -52,6 +44,14 @@
             <span asp-validation-for="Description" class=" text-danger"></span>
         </div>
 
+        <div class=" mb-3">
+            <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "Id", "Name"))">
+                    <option value="">Select a User</option>
+                </select>
+           @*  <label asp-for="User">Add Participant</label>
+            <select class="select" multiple data-mdb-placeholder="Select a Participant" asp-for="User" asp-items="@(new SelectList(ViewBag.Users, "Id", "Name"))">
+            </select> *@
+        </div>
         <button type="submit" class=" btn btn-primary" style="width:150px">Create</button>
         <a asp-controller="Booking" asp-action="Index" class=" btn btn-secondary" style="width: 150px">Back to List </a>
 

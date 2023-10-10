@@ -9,105 +9,105 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MeetingRoomManagementSystem
 build_property.RootNamespace = MeetingRoomManagementSystem
-build_property.ProjectDir = D:\.net\project\MeetingRoomManagementSystem\
+build_property.ProjectDir = D:\New folder\.net\project\MeetingRoomManagementSystem\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\.net\project\MeetingRoomManagementSystem
+build_property.MSBuildProjectDirectory = D:\New folder\.net\project\MeetingRoomManagementSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Booking/Create.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Booking/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Booking/Delete.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Booking/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Booking/Edit.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Booking/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Booking/Index.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Booking/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Home/Index.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Home/Privacy.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Home/UserIndex.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Home/UserIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VySW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Room/Create.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Room/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Room/Delete.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Room/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Room/Edit.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Room/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Room/Index.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Room/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Shared/Error.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Shared/_LoginPartial.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Shared/_Notification.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Shared/_Notification.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/User/Create.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/User/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/User/Delete.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/User/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/User/Edit.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/User/Index.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/User/Login.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/User/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/User/UserIndex.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/User/UserIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VySW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/_ViewImports.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/_ViewStart.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/.net/project/MeetingRoomManagementSystem/Views/Shared/_Layout.cshtml]
+[D:/New folder/.net/project/MeetingRoomManagementSystem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-kxbyf5we0k
